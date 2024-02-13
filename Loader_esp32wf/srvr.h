@@ -24,8 +24,8 @@
 #include "html.h"    // HTML page of the tool
 
 /* SSID and password of your WiFi net ----------------------------------------*/
-const char *ssid = "JSBPI"; //"your ssid";
-const char *password = "waveshare0755";   //"your password";
+const char *ssid = ""; //"your ssid";
+const char *password = "";   //"your password";
 
 /* Static IP address Settings ------------------------------------------------*/
 IPAddress staticIP(192, 168, 1, 159);
@@ -149,6 +149,7 @@ bool Srvr__loop()
 
     // While the stream of 'client' has some data do...
     while (client.available()) {
+
         // Read a character from 'client'
         int q = client.read();
 
@@ -245,7 +246,7 @@ bool Srvr__loop()
                 EPD_dispMass[EPD_dispIndex].show();
 
                 //Print log message: show
-                Serial.print("\r\nSHOW");
+                Serial.print("SHOW");
                 //client.print("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n");
                 break;
             }

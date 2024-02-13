@@ -57,7 +57,7 @@ client.println(
 //-------------------------------------------
 "function RB(vl,tx){\r\n"
     "return '<input type=\"radio\" name=\"kind\" value=\"m'+vl+\r\n"
-  "'\" onclick=\"rbClick('+vl+');\"'+(vl==0?'checked=\"true\"':'')+'/>'+tx;\r\n"
+  "'\" onclick=\"rbClick('+vl+');\"'+(vl==45?'checked=\"true\"':'')+'/>'+tx;\r\n"
 "}\r\n"
 //-------------------------------------------
 "window.onload = function(){\r\n"
@@ -66,7 +66,7 @@ client.println(
     "srcBox.ondragover=ignoreDrag;\r\n"
     "srcBox.ondrop=drop;\r\n"
     "srcImg=0;\r\n"
-    "epdInd=0;\r\n"
+    "epdInd=45;\r\n"
 
 "palArr=[[[0,0,0],[255,255,255]],\r\n"
 "[[0,0,0],[255,255,255],[127,0,0]],\r\n"
@@ -102,7 +102,7 @@ client.println(
 "Btn(5,'Upload image','uploadImage();'));\r\n"
 
 "setInn('XY',getNud('x','0')+getNud('y','0'));\r\n"
-"setInn('WH',getNud('w','200')+getNud('h','200'));\r\n"
+"setInn('WH',getNud('w','960')+getNud('h','680'));\r\n"
   
 "setInn('RB',RB(0,'1.54&ensp;')+RB(1,'1.54b')+RB(2,'1.54c&ensp;<br>')+\r\n"
 "RB(3,'2.13&ensp;')+RB(4,'2.13b')+RB(5,'2.13c<br>')+\r\n"
